@@ -4,10 +4,16 @@ A Lean 4 / Mathlib formalization of operator precedence languages (OPL).
 
 ## Layout (as of now)
 
-| File | Content |
-| --- | --- |
-| `OPL.lean` | root module, imports the whole library |
-| `OPL/Alphabet.lean` | Section I.1: OP alphabets, chains, depth, compatible words (Def. I.1.3–I.1.6) |
+`OPL.lean` root module, imports the whole library
+`OPL/Alphabet.lean`  Section I.1: OP alphabets, chains, depth, compatible words (Def. I.1.3–I.1.6)
+`OPL/Determinization.lean` ...things on the paper
+`OPL/Grammar.lean` 
+`OPL/Automaton.lean`
+`OPL/Logic.lean`
+`OPL/Statements.lean`
+`OPL/Examples.lean` contains the tests, inspired from the expression `n + n × Ln + nM`
+
+Currently, there are 6 theorems and 21 "sorry"s
 
 ## Build
 

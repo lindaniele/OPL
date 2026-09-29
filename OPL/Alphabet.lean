@@ -31,7 +31,7 @@ inductive Prec where
 
 /-! ## Alfabeto OP (Def. I.1.3)
 
-DECISION 1 — the delimiter `#`.
+DECISION 1  the delimiter `#`.
 `#` is represented by `none : Option α`, so `Σ ∪ {#}` is `Option α`,
 without needing a dedicated sum type. The concrete gain appears in the
 automaton semantics: the pop move compares the top of the stack with the
@@ -39,7 +39,7 @@ automaton semantics: the pop move compares the top of the stack with the
 with this encoding we have `nextSymbol [] = none`, and there is no need
 to treat the terminal case separately.
 
-DECISION 2 — conflict-freeness for free.
+DECISION 2 conflict-freeness .
 The paper defines `M` as a matrix of *sets* of relations and then imposes
 `|M_ab| ≤ 1`. well, it means that each pair of terminals
 gets at most one of the three relations.
@@ -145,7 +145,12 @@ Due vantaggi:
 /-- `EqRun G f x l`: `x = f … l` con `≐` fra caratteri consecutivi.
 Evita di dover parlare di `List.getLast` con la sua ipotesi `≠ []`.
 it says that x runs from f to l with ≐ between consecutive elements.
-It is used instead of getLast to avoid the non-emptiness proof-/
+It is used instead of getLast to avoid the non-emptiness proof
+
+so: a simple chain has a1 = ... = an and to state the chain conditions
+you need to takl about a1 and an
+if you represent the chain as Lst α lean needs to check non-empty
+instead: you represent as this runs from a1 to an -/
 inductive EqRun (G : OPAlphabet α) : α → List α → α → Prop
   | single (a : α) : EqRun G a [a] a
   | cons {a b : α} {l : List α} {z : α} :
