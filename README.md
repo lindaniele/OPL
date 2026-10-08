@@ -1,4 +1,5 @@
 # OperatorPrecedenceLanguages
+THIS WORK IS STILL IN PROGRESS
 
 A Lean 4 / Mathlib formalization of operator precedence languages (OPL).
 
